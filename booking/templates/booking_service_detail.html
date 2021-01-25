@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>{{ service.title }}</h1>
+{% if service.pk == 1 %}
+<div class="content">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h3>Bitte whälen Sie Ihre Packet</h3>
+        <ul class="serviceForm">
+            {% for radio in service_form.service_title %}
+            <li>
+                {{ radio }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% if extra_form %}
+        <h4>Bitte whälen Sie Ihre Extra</h4>
+
+        <p>{{ chosen }}</p>
+
+        <ul class="serviceForm">
+            {% for radio in extra_form.extra_title %}
+            <li>
+                {{ radio }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <input type="submit" value="Auswählen">
+    </form>
+</div>
+{% elif service.pk == 2 %}
+<div class="content">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h3>Bitte whälen Sie Ihre Packet</h3>
+        <ul class="serviceForm">
+            {% for radio in service_form.service_title %}
+            <li>
+                {{ radio }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% if extra_form %}
+        <h4>Bitte whälen Sie Ihre Extra</h4>
+        
+        <p>{{ chosen }}</p>
+
+        <ul class="serviceForm">
+            {% for radio in extra_form.extra_title %}
+            <li>
+                {{ radio }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <input type="submit" value="Auswählen">
+    </form>
+</div>
+{% else %}
+<h3>
+    This is {{ service.pk }}
+</h3>
+{% endif %}
+{% endblock %}

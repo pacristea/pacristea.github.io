@@ -1,0 +1,50 @@
+html {
+    background-color: ivory;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.content {
+    padding-left: 40px;
+}
+
+.item {
+    flex: 0 1 20vw;
+    margin: 20px;
+    text-align: center;
+    min-width: 350px;
+}
+
+.card_img {
+    width: 80%;
+    height: 200px;
+}
+
+h1 {
+    padding: 20px;
+    background-color: green;
+    color: ivory;
+    font-size: 36px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: ivory;
+    font-size: 18px;
+}
+
+.button {
+    padding: 10px 35px;
+    margin: 10px;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.serviceForm {
+    padding-left: 0;
+    list-style-type: none;
+}
